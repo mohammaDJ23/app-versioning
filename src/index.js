@@ -1,7 +1,7 @@
 const user = {
   name: '',
   lastName: '',
-  age: '',
+  age: ,
 };
 
 console.log(user);
