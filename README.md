@@ -58,7 +58,7 @@ A version number is formatted as MAJOR.MINOR.PATCH (e.g., 2.1.3).
 	Example: You add a dark mode or a new settings screen without changing how existing features work.
 
 ##### PATCH Version (0.0.Z):
-  You increment this when you make backward-compatible bug fixes.
+  	You increment this when you make backward-compatible bug fixes.
 	This is a maintenance release.
 	Example: You fix a crash that happened when typing in a text field.
 
