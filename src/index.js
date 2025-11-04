@@ -4,4 +4,4 @@ const user = {
   age: '',
 };
 
-console.log(user);
+console.log('User:', user);
