@@ -5,7 +5,7 @@ git pull origin master
 ```
 #### Create a new branch
 ```
-git checkout -b hotfix/redesign
+git checkout -b feature/redesign
 ```
 #### After adding the new changes, commit them.
 ```
@@ -22,6 +22,6 @@ git rebase -i master
 ```
 #### Push your changes to the branch and tag.
 ```
-git push origin hotfix/redesign
+git push origin feature/redesign
 git push origin v2.0.0
 ```

@@ -5,7 +5,7 @@ git pull origin master
 ```
 #### Create a new branch
 ```
-git checkout -b hotfix/dashboard
+git checkout -b feature/dashboard
 ```
 #### After adding the new changes, commit them.
 ```
@@ -22,6 +22,6 @@ git rebase -i master
 ```
 #### Push your changes to the branch and tag.
 ```
-git push origin hotfix/dashboard
+git push origin feature/dashboard
 git push origin v1.1.0
 ```
