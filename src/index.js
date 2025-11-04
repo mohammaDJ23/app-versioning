@@ -1,15 +1,9 @@
-const { Dashboard } = require('./dashboard');
+const { User } = require('./user');
 
 function main() {
-  const user = {
-    name: 'Mohammad',
-    lastName: 'Nowresideh',
-    age: 28,
-  };
-
-  const dashboard = new Dashboard(user);
-
-  console.log(dashboard.create());
+  const user = new User('Mohammad', 'Nowresideh', 28);
+  
+  user.log();
 }
 
 main();
