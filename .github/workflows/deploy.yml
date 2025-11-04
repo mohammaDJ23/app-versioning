@@ -1,0 +1,19 @@
+name: Deploy to Production
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          
+      - name: Deploy
+        run: |
+          echo "Deploying version ${GITHUB_REF#refs/tags/}"
+          npm start
