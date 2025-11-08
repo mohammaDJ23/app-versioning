@@ -12,11 +12,6 @@ git checkout v2.0.0
 ```
 git checkout -b hotfix/emergency-rollback-v2.0.1
 ```
-##### Find the commits and revert them.
-```
-git log --oneline v2.0.0..v2.0.1
-git revert <commit-hash1> <commit-hash2> --no-edit
-```
 ##### Update version to indicate this is a fix.
 ```
 npm version patch -m "Emergency rollback: fixing issues from failed v2.0.1 release"
