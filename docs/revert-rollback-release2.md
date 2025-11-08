@@ -1,0 +1,28 @@
+##### Let's say there is a bad version called v2.0.1.
+##### Remove it locally and remotely.
+```
+git tag -d v2.0.1
+git push origin --delete v2.0.1
+```
+##### Checkout the last good version.
+```
+git checkout v2.0.0
+```
+##### Identify the problematic commits.
+```
+git checkout -b hotfix/emergency-rollback-v2.0.1
+```
+##### Find the commits and revert them.
+```
+git log --oneline v2.0.0..v2.0.1
+git revert <commit-hash1> <commit-hash2> --no-edit
+```
+##### Update version to indicate this is a fix.
+```
+npm version patch -m "Emergency rollback: fixing issues from failed v2.0.1 release"
+```
+##### Create a new version and push them.
+```
+git push origin hotfix/emergency-rollback-v2.0.1
+git push origin v2.0.1
+```
