@@ -1,3 +1,12 @@
+function Users() {
+  this.users = [];
+}
+
+Users.prototype.push = function(user) {
+  this.users.push(user);
+  console.log(`${user.name} ${user.lastName} is stored.`);
+};
+
 function User(name, lastName, age) {
   this.name = name;
   this.lastName = lastName;
@@ -10,4 +19,4 @@ User.prototype.log = function() {
   );
 };
 
-module.exports = { User };
+module.exports = { User, Users };
