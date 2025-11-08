@@ -8,7 +8,7 @@ git push origin --delete v2.0.1
 ```
 git checkout v2.0.0
 ```
-##### Identify the problematic commits.
+##### Create a branch.
 ```
 git checkout -b hotfix/emergency-rollback-v2.0.1
 ```
