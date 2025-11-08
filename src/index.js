@@ -4,7 +4,6 @@ function main() {
   const user = new User('Mohammad', 'Nowresideh', 28);
   
   user.log();
-  console.log('Done!');
 }
 
 main();
