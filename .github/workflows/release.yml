@@ -10,6 +10,10 @@ jobs:
     if: github.event.pull_request.merged == true
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     
     steps:
       - name: Checkout code
