@@ -9,7 +9,6 @@ function main() {
 
   user.log();
   user.log();
-  user.analyze();
 
   console.log(auth.isAuthenticated);
   console.log(`Hello!`);
