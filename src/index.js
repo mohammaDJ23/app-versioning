@@ -8,6 +8,7 @@ function main() {
   auth.login();
 
   user.log();
+  user.log();
 
   console.log(auth.isAuthenticated);
   console.log(`Hello!`);
