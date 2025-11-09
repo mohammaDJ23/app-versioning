@@ -1,6 +1,7 @@
 function Auth() {
   this.isAuthenticated = true;
   this.token = '';
+  this.time = new Date().toISOString();
 }
 
 Auth.prototype.isAuthenticated = function() {
