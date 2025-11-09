@@ -6,4 +6,8 @@ Auth.prototype.isAuthenticated = function() {
   return this.isAuthenticated;
 };
 
+Auth.prototype.login = function() {
+  return;
+};
+
 module.exports = { Auth };
