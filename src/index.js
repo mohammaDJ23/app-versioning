@@ -9,6 +9,7 @@ function main() {
 
   user.log();
   user.log();
+  user.getFullName();
 
   console.log(auth.isAuthenticated);
   console.log(`Hello!`);
