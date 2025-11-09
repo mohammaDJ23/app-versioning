@@ -2,10 +2,7 @@
   "branches": ["master"],
   "plugins": [
     ["@semantic-release/commit-analyzer", {
-      "preset": "conventionalcommits",
-      "parserOpts": {
-        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
-      },
+      "preset": "angular",
       "releaseRules": [
         {"type": "feature", "release": "minor"},
         {"type": "feat", "release": "minor"},
@@ -16,7 +13,6 @@
         {"type": "hotfix", "release": "patch"},
         {"type": "security", "release": "minor"},
         {"type": "breaking", "release": "major"},
-        
         {"type": "docs", "release": false},
         {"type": "style", "release": "patch"},
         {"type": "refactor", "release": "patch"},
@@ -25,24 +21,11 @@
         {"type": "ci", "release": "patch"},
         {"type": "chore", "release": "patch"},
         {"type": "revert", "release": "patch"},
-
         {"subject": "*BREAKING*", "release": "major"},
         {"body": "*BREAKING CHANGE*", "release": "major"}
       ]
     }],
-    ["@semantic-release/release-notes-generator", {
-      "preset": "conventionalcommits",
-      "presetConfig": {
-        "types": [
-          {"type": "feature", "section": "🚀 Features"},
-          {"type": "feat", "section": "🚀 Features"},
-          {"type": "improvement", "section": "✨ Improvements"},
-          {"type": "fix", "section": "🐛 Bug Fixes"},
-          {"type": "perf", "section": "⚡ Performance"},
-          {"type": "breaking", "section": "💥 Breaking Changes"}
-        ]
-      }
-    }],
+    "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     "@semantic-release/github",
     [
