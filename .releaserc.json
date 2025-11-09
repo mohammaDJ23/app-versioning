@@ -3,10 +3,6 @@
   "plugins": [
     ["@semantic-release/commit-analyzer", {
       "preset": "angular",
-      "parserOpts": {
-        "mergePattern": "^Merge pull request #(\\d+) from (.*)$",
-        "mergeCorrespondence": ["id", "source"]
-      },
       "releaseRules": [
         {"type": "feature", "release": "minor"},
         {"type": "feat", "release": "minor"},
