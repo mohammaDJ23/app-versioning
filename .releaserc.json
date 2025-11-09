@@ -18,12 +18,12 @@
         {"type": "breaking", "release": "major"},
         
         {"type": "docs", "release": false},
-        {"type": "style", "release": false},
+        {"type": "style", "release": "patch"},
         {"type": "refactor", "release": "patch"},
-        {"type": "test", "release": false},
+        {"type": "test", "release": "patch"},
         {"type": "build", "release": "patch"},
-        {"type": "ci", "release": false},
-        {"type": "chore", "release": false},
+        {"type": "ci", "release": "patch"},
+        {"type": "chore", "release": "patch"},
         {"type": "revert", "release": "patch"},
 
         {"subject": "*BREAKING*", "release": "major"},
