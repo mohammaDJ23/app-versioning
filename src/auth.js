@@ -10,4 +10,8 @@ Auth.prototype.login = function() {
   return;
 };
 
+Auth.prototype.logout = function() {
+  return;
+};
+
 module.exports = { Auth };
