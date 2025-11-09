@@ -28,31 +28,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Debug current state
-        run: |
-          echo "=== CURRENT STATE ==="
-          echo "Package.json version:"
-          cat package.json | grep version || echo "No version field"
-          echo ""
-          echo "Last 5 commits:"
-          git log --oneline -5
-          echo ""
-          echo "Existing tags:"
-          git tag -l
-          echo "=== END CURRENT STATE ==="
-
       - name: Run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEBUG: "semantic-release:*"  # Enable debug mode
-        run: npx semantic-release --debug
-
-      - name: Verify changes
-        run: |
-          echo "=== VERIFYING CHANGES ==="
-          echo "Package.json version after release:"
-          cat package.json | grep version || echo "No version field"
-          echo ""
-          echo "Git status:"
-          git status
-          echo "=== END VERIFICATION ==="
+        run: npx semantic-release
