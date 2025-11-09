@@ -1,5 +1,6 @@
 function Auth() {
   this.isAuthenticated = true;
+  this.token = '';
 }
 
 Auth.prototype.isAuthenticated = function() {
