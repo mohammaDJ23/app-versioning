@@ -1,5 +1,9 @@
+const { Auth } = require('./auth');
+
 function main() {
-  console.log('hello');
+  const auth = new Auth();
+
+  console.log(`Hello! Is it authenticated? ${auth.isAuthenticated}`);
 }
 
 main();
