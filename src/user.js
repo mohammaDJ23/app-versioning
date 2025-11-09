@@ -7,8 +7,4 @@ User.prototype.log = function() {
   console.log(this.name, this.lastName);
 };
 
-User.prototype.analyze = function() {
-  return;
-};
-
 module.exports = { User };
