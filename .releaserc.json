@@ -21,11 +21,26 @@
         {"type": "ci", "release": "patch"},
         {"type": "chore", "release": "patch"},
         {"type": "revert", "release": "patch"},
+        {"type": "rollback", "release": "patch"},
+        {"subject": "*revert*", "release": "patch"},
+        {"body": "*This reverts commit*", "release": "patch"},
         {"subject": "*BREAKING*", "release": "major"},
         {"body": "*BREAKING CHANGE*", "release": "major"}
       ]
     }],
-    "@semantic-release/release-notes-generator",
+    ["@semantic-release/release-notes-generator", {
+      "preset": "conventionalcommits",
+      "presetConfig": {
+        "types": [
+          {"type": "feat", "section": "🚀 Features"},
+          {"type": "feature", "section": "🚀 Features"},
+          {"type": "fix", "section": "🐛 Bug Fixes"},
+          {"type": "revert", "section": "↩️ Reverts"},
+          {"type": "rollback", "section": "🔄 Rollbacks"},
+          {"type": "hotfix", "section": "🚑 Hotfixes"}
+        ]
+      }
+    }],
     "@semantic-release/changelog",
     "@semantic-release/github",
     ["@semantic-release/npm", {
