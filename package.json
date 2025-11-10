@@ -1,6 +1,6 @@
 {
   "name": "app-versioning",
-  "version": "1.2.2",
+  "version": "1.0.0",
   "description": "A testing project for versioning",
   "main": "./src/index.js",
   "scripts": {
